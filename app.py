@@ -29,9 +29,8 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Intellgent Video Surveilece")
-
         self.ui = uic.loadUi("stream.ui", self)
+        self.ui.setWindowTitle("Intellgent Video Surveilece")
         self.setFixedSize(self.size())
         self.ui.start_stream.clicked.connect(self.handle_start_stream)
         self.ui.stop_stream.clicked.connect(self.handle_stop_stream)
@@ -335,8 +334,8 @@ class WorkerMessage(QThread):
 
         while self.ThreadActive:
             if WorkerMessage.params:
-                mail.send_mail(credentials["mail"], WorkerMessage.params)
-                sms.send_sms(credentials["sms"], WorkerMessage.params)
+                # mail.send_mail(credentials["mail"], WorkerMessage.params)
+                # sms.send_sms(credentials["sms"], WorkerMessage.params)
                 WorkerMessage.params = None
                 MainWindow.sent_messages = True
                 time.sleep(0.1)
