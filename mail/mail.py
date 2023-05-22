@@ -54,7 +54,7 @@ Location coordinates: 27.694474, 85.318876
 
     # Attachements
     IMG_DIR = "images"
-    imgs = os.listdir(IMG_DIR)
+    imgs = os.listdir(IMG_DIR)[0:4] # only some sample images, running multiple times creates more imgs
     for img in imgs:
         with open(os.path.join(IMG_DIR, img), "rb") as f:
             file_data = f.read()

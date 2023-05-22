@@ -334,8 +334,8 @@ class WorkerMessage(QThread):
 
         while self.ThreadActive:
             if WorkerMessage.params:
-                # mail.send_mail(credentials["mail"], WorkerMessage.params)
-                # sms.send_sms(credentials["sms"], WorkerMessage.params)
+                mail.send_mail(credentials["mail"], WorkerMessage.params)
+                sms.send_sms(credentials["sms"], WorkerMessage.params)
                 WorkerMessage.params = None
                 MainWindow.sent_messages = True
                 time.sleep(0.1)
