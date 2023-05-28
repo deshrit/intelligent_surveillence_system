@@ -17,7 +17,7 @@ EMAIL_AUTH_TOKEN="your_token"
 SMS_ACCOUNT_SID="your_twilio_sid"
 SMS_AUTH_TOKEN="your_twilio_auth_token"
 ```
-10. Update `credentials.json` to add following
+3. Update `credentials.json` to add following
 ```
 "EMAIL_SENDER": "your_email_sender_account",
 "EMAIL_RECEIVERS": [
@@ -28,5 +28,5 @@ SMS_AUTH_TOKEN="your_twilio_auth_token"
 "SMS_SENDER":  "your_sender_twilio_number",
 "SMS_TARGETS": ["receiver_1",]
 ```
-3. Make directory to stored detected images `mkdir images`
-4. Run `python app.py`
+4. Make directory to stored detected images `mkdir images`
+5. Run `python app.py`
